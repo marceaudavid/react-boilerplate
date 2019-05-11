@@ -15,7 +15,7 @@ module.exports = {
     contentBase: "./build",
     historyApiFallback: true,
     compress: true,
-    hot: true
+    hotOnly: true
   },
   devtool: "inline-source-map",
   module: {
