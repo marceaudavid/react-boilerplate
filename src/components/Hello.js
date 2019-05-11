@@ -3,7 +3,11 @@ import "./Hello.css";
 
 class Hello extends Component {
   render() {
-    return <h1 className='hello'>Hello World !</h1>;
+    return (
+      <>
+        <h1 className='hello'>Hello World !</h1>
+      </>
+    );
   }
 }
 

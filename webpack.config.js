@@ -13,6 +13,8 @@ module.exports = {
   },
   devServer: {
     contentBase: "./build",
+    historyApiFallback: true,
+    compress: true,
     hot: true
   },
   devtool: "inline-source-map",
@@ -21,14 +23,14 @@ module.exports = {
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
-        use: ["babel-loader"]
+        use: [{ loader: "babel-loader" }]
       },
       {
         test: /\.css$/,
         use: ["style-loader", "css-loader"]
       },
       {
-        test: /\.(png|jpg|svg|gif)$/,
+        test: /\.(png|jpe?g|svg|gif)$/,
         use: ["file-loader"]
       },
       {
