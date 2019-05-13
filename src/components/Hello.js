@@ -1,11 +1,15 @@
 import React, { Component } from "react";
-import "./Hello.css";
+import styled from "styled-components";
+
+const StyledTitle = styled.h1`
+  color: blue;
+`;
 
 class Hello extends Component {
   render() {
     return (
       <>
-        <h1 className='hello'>Hello World !</h1>
+        <StyledTitle>Hello World !</StyledTitle>
       </>
     );
   }
