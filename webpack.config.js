@@ -1,6 +1,7 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CleanWebpackPlugin = require("clean-webpack-plugin");
+const TerserPlugin = require("terser-webpack-plugin");
 const webpack = require("webpack");
 
 module.exports = {
@@ -45,5 +46,8 @@ module.exports = {
       template: path.resolve("./index.html")
     }),
     new webpack.HotModuleReplacementPlugin()
-  ]
+  ],
+  optimization: {
+    minimizer: [new TerserPlugin()]
+  }
 };
